@@ -42,7 +42,7 @@ public class Main {
         System.out.println(classes1);
         String seats = chooseSeat(scanner.nextInt());
         System.out.println(seats);
-//        boolean[] isEmpty = {false, false, false, false, false, false, false, false, false, false};
+        boolean[] isEmpty = {false, false, false, false, false, false, false, false, false, false};
     }
 
     }
