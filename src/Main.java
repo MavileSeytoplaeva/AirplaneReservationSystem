@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
@@ -26,13 +27,18 @@ public class Main {
         }
     }
     public static String chooseSeat(int seat) {
+        boolean[] isReserved = new boolean[10];
         if (seat <= 5) {
+            isReserved[seat-1] = true;
             return "Your seat number is "+seat+" and it is in the economy class.";
         } else if (seat <= 10) {
+            isReserved[seat-1] = true;
+            System.out.println(Arrays.toString(isReserved));
             return "Your seat number is " + seat + " and it is in the first class.";
         } else {
             return "There is no seat number "+seat;
         }
+
     }
 
     public static void task() {
@@ -42,8 +48,9 @@ public class Main {
         System.out.println(classes1);
         String seats = chooseSeat(scanner.nextInt());
         System.out.println(seats);
-        boolean[] isEmpty = {false, false, false, false, false, false, false, false, false, false};
-    }
+
+
+            }
 
     }
 
